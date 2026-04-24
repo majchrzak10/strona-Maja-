@@ -1,0 +1,272 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { czynnosci } from '../data/czynnosci.js';
+---
+
+<Layout
+  title="Czynności notarialne"
+  description="Wykaz czynności notarialnych i wymaganych dokumentów. Nieruchomości, prawo spadkowe, pełnomocnictwa, poświadczenia, spółki, depozyt notarialny – Kancelaria w Wągrowcu."
+>
+
+  <!-- Page header -->
+  <div class="bg-[#231F1C] py-14 md:py-20">
+    <div class="container-wide">
+      <p class="font-sans text-[#A38A66] text-xs tracking-[0.3em] uppercase mb-3">
+        Kancelaria Notarialna w Wągrowcu
+      </p>
+      <h1 class="font-serif text-4xl md:text-5xl text-white font-semibold">
+        Czynności notarialne
+      </h1>
+      <p class="font-sans text-stone-400 text-base mt-4 max-w-xl font-light">
+        Wykaz czynności i orientacyjna lista wymaganych dokumentów
+      </p>
+    </div>
+  </div>
+
+  <!-- Breadcrumb -->
+  <div class="bg-[#EFEBE3] border-b border-stone-300">
+    <div class="container-wide py-3">
+      <nav class="font-sans text-xs text-[#6B6864]">
+        <a href="/" class="hover:text-[#A38A66] transition-colors">Strona główna</a>
+        <span class="mx-2">›</span>
+        <span class="text-[#2C2A28]">Czynności notarialne</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Disclaimer -->
+  <div class="bg-amber-50 border-b border-amber-200">
+    <div class="container-wide py-4">
+      <div class="flex items-start gap-3">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+        <p class="font-sans text-amber-800 text-sm leading-relaxed">
+          <strong class="font-semibold">Ważna informacja:</strong> Poniższy wykaz dokumentów ma charakter orientacyjny
+          i dotyczy typowych, standardowych przypadków. Ostateczna lista wymaganych dokumentów
+          jest ustalana indywidualnie przez kancelarię dla każdej sprawy.
+          <strong class="font-medium">Prosimy o kontakt telefoniczny lub mailowy przed wizytą</strong>,
+          aby potwierdzić kompletność dokumentacji.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Spis kategorii (anchory) -->
+  <div class="bg-[#EFEBE3] border-b border-stone-300 sticky top-[73px] z-40 hidden lg:block">
+    <div class="container-wide py-3 overflow-x-auto">
+      <nav class="flex items-center gap-1 flex-nowrap">
+        <span class="font-sans text-xs text-[#6B6864] mr-3 flex-shrink-0">Przejdź do:</span>
+        {czynnosci.map(kat => (
+          <a
+            href={`#${kat.id}`}
+            class="font-sans text-xs text-[#4A4744] hover:text-[#A38A66] px-3 py-1.5 hover:bg-[#E3DDD3] transition-colors whitespace-nowrap flex-shrink-0"
+          >
+            {kat.kategoria}
+          </a>
+        ))}
+      </nav>
+    </div>
+  </div>
+
+  <!-- Podstawa prawna (intro) -->
+  <section class="py-12 md:py-16 bg-[#FDFBF7]">
+    <div class="container-wide">
+      <div class="max-w-4xl">
+        <h2 class="section-heading mb-4">Podstawa prawna</h2>
+        <div class="divider-brass-left"></div>
+        <p class="font-sans text-[#4A4744] leading-relaxed text-sm mt-6">
+          Notariusz dokonuje czynności notarialnych na podstawie ustawy z dnia 14 lutego 1991 r.
+          Prawo o notariacie (Dz.U. 1991 nr 22 poz. 91 z późn. zm.). Katalog czynności notarialnych
+          określony jest w art. 79 tej ustawy. Notariusz jest obowiązany dokonać czynności notarialnej,
+          jeżeli wymaga tego interes prawny osoby zainteresowanej i nie jest ona sprzeczna
+          z prawem lub zasadami współżycia społecznego.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Accordion z kategoriami -->
+  <section class="pb-16 md:pb-24 bg-[#FDFBF7]">
+    <div class="container-wide">
+      <div class="max-w-4xl space-y-3" id="accordion-root">
+
+        {czynnosci.map((kat, katIndex) => (
+          <div id={kat.id} class="border border-stone-200 bg-white scroll-mt-40">
+
+            <!-- Kategoria header -->
+            <button
+              type="button"
+              class="category-btn w-full flex items-center justify-between px-6 py-5 text-left hover:bg-[#FDFBF7] transition-colors group"
+              aria-expanded="false"
+              data-category={kat.id}
+            >
+              <div class="flex items-center gap-4 min-w-0">
+                <span class="font-sans text-xs text-[#A38A66] font-medium tracking-widest uppercase flex-shrink-0">
+                  {String(katIndex + 1).padStart(2, '0')}
+                </span>
+                <div class="min-w-0">
+                  <h3 class="font-serif text-xl text-[#2C2A28] font-semibold group-hover:text-[#A38A66] transition-colors">
+                    {kat.kategoria}
+                  </h3>
+                  <p class="font-sans text-[#6B6864] text-xs mt-0.5 leading-relaxed hidden sm:block">
+                    {kat.opis}
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 flex-shrink-0 ml-4">
+                <span class="font-sans text-xs text-[#6B6864] hidden sm:block">
+                  {kat.pozycje.length} {kat.pozycje.length === 1 ? 'czynność' : kat.pozycje.length < 5 ? 'czynności' : 'czynności'}
+                </span>
+                <div class="w-8 h-8 rounded-full bg-[#EFEBE3] flex items-center justify-center flex-shrink-0 group-hover:bg-[#A38A66]/20 transition-colors">
+                  <svg class="accordion-icon w-4 h-4 text-[#A38A66] transition-transform duration-300"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                  </svg>
+                </div>
+              </div>
+            </button>
+
+            <!-- Kategoria content -->
+            <div class="accordion-content" data-content={kat.id}>
+              <div class="border-t border-stone-100">
+
+                {kat.pozycje.map((poz, pozIndex) => (
+                  <div class="border-b border-stone-100 last:border-b-0">
+
+                    <!-- Czynność header -->
+                    <button
+                      type="button"
+                      class="item-btn w-full flex items-center justify-between px-6 pl-10 py-4 text-left hover:bg-[#FDFBF7] transition-colors group/item"
+                      aria-expanded="false"
+                      data-item={`${kat.id}-${pozIndex}`}
+                    >
+                      <div class="flex items-center gap-3 min-w-0">
+                        <div class="w-1.5 h-1.5 rounded-full bg-[#A38A66] flex-shrink-0"></div>
+                        <span class="font-sans text-sm text-[#2C2A28] font-medium group-hover/item:text-[#A38A66] transition-colors">
+                          {poz.nazwa}
+                        </span>
+                      </div>
+                      <svg class="item-icon w-4 h-4 text-[#6B6864] flex-shrink-0 ml-3 transition-transform duration-200 group-hover/item:text-[#A38A66]"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                      </svg>
+                    </button>
+
+                    <!-- Czynność dokumenty -->
+                    <div class="item-content" data-item-content={`${kat.id}-${pozIndex}`}>
+                      <div class="px-6 pl-14 pb-5 pt-1">
+                        <p class="font-sans text-xs text-[#6B6864] uppercase tracking-widest mb-3 font-medium">
+                          Wymagane dokumenty (orientacyjnie):
+                        </p>
+                        <ul class="space-y-2">
+                          {poz.dokumenty.map(dok => (
+                            <li class="flex items-start gap-2.5">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#A38A66] flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                              </svg>
+                              <span class="font-sans text-sm text-[#4A4744] leading-relaxed">{dok}</span>
+                            </li>
+                          ))}
+                        </ul>
+                        <div class="mt-5 pt-4 border-t border-stone-100">
+                          <p class="font-sans text-xs text-[#6B6864] italic">
+                            W zależności od stanu faktycznego kancelaria może wymagać dodatkowych dokumentów.
+                            Prosimy o kontakt przed wizytą: <a href="tel:+48672620868" class="text-[#A38A66] hover:underline">67 26 20 868</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                ))}
+
+              </div>
+            </div>
+
+          </div>
+        ))}
+
+      </div>
+
+      <!-- Kontakt CTA -->
+      <div class="max-w-4xl mt-12">
+        <div class="bg-[#231F1C] p-8 md:p-10">
+          <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <div>
+              <h3 class="font-serif text-white text-2xl font-medium mb-2">
+                Mają Państwo pytania?
+              </h3>
+              <p class="font-sans text-stone-400 text-sm">
+                Chętnie pomożemy ustalić jakie dokumenty są potrzebne w konkretnej sprawie.
+              </p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-3 flex-shrink-0">
+              <a href="tel:+48672620868" class="btn-primary text-sm text-center tracking-wider whitespace-nowrap">
+                Zadzwoń: 67 26 20 868
+              </a>
+              <a href="/kontakt" class="btn-outline text-sm text-center tracking-wider text-stone-300 border-stone-600 hover:bg-stone-700 hover:border-stone-500 whitespace-nowrap">
+                Dane kontaktowe
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</Layout>
+
+<script>
+  // Accordion logic - kategorie
+  document.querySelectorAll<HTMLButtonElement>('.category-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const categoryId = btn.dataset.category!;
+      const content = document.querySelector<HTMLElement>(`[data-content="${categoryId}"]`);
+      const icon = btn.querySelector<SVGElement>('.accordion-icon');
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+      if (isOpen) {
+        btn.setAttribute('aria-expanded', 'false');
+        content?.classList.remove('open');
+        icon?.classList.remove('open');
+      } else {
+        btn.setAttribute('aria-expanded', 'true');
+        content?.classList.add('open');
+        icon?.classList.add('open');
+      }
+    });
+  });
+
+  // Accordion logic - pozycje (dokumenty)
+  document.querySelectorAll<HTMLButtonElement>('.item-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const itemId = btn.dataset.item!;
+      const content = document.querySelector<HTMLElement>(`[data-item-content="${itemId}"]`);
+      const icon = btn.querySelector<SVGElement>('.item-icon');
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+      if (isOpen) {
+        btn.setAttribute('aria-expanded', 'false');
+        content?.classList.remove('open');
+        icon?.style.setProperty('transform', '');
+      } else {
+        btn.setAttribute('aria-expanded', 'true');
+        content?.classList.add('open');
+        icon?.style.setProperty('transform', 'rotate(180deg)');
+      }
+    });
+  });
+
+  // Open category from hash
+  const hash = window.location.hash.slice(1);
+  if (hash) {
+    const btn = document.querySelector<HTMLButtonElement>(`[data-category="${hash}"]`);
+    if (btn) {
+      btn.click();
+      setTimeout(() => btn.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
+    }
+  }
+</script>

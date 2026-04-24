@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #FDFBF7;
+    color: #2C2A28;
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-block px-6 py-3 bg-[#A38A66] text-white font-sans font-medium tracking-wide
+           transition-all duration-200 hover:bg-[#8A7354] focus:outline-none focus:ring-2
+           focus:ring-[#A38A66] focus:ring-offset-2;
+  }
+
+  .btn-outline {
+    @apply inline-block px-6 py-3 border border-[#A38A66] text-[#A38A66] font-sans font-medium
+           tracking-wide transition-all duration-200 hover:bg-[#A38A66] hover:text-white
+           focus:outline-none focus:ring-2 focus:ring-[#A38A66] focus:ring-offset-2;
+  }
+
+  .section-heading {
+    @apply font-serif text-3xl md:text-4xl text-graphite font-semibold leading-snug;
+  }
+
+  .section-subheading {
+    @apply font-serif text-xl md:text-2xl text-graphite-light font-medium;
+  }
+
+  .divider-brass {
+    @apply w-16 h-0.5 bg-brass mx-auto my-4;
+  }
+
+  .divider-brass-left {
+    @apply w-16 h-0.5 bg-brass my-4;
+  }
+
+  .container-wide {
+    @apply max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16;
+  }
+}
+
+/* Accordion animations */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease-out;
+}
+
+.accordion-content.open {
+  max-height: 2000px;
+  transition: max-height 0.5s ease-in;
+}
+
+.accordion-icon {
+  transition: transform 0.3s ease;
+}
+
+.accordion-icon.open {
+  transform: rotate(45deg);
+}

@@ -1,0 +1,274 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Strona główna"
+  description="Kancelaria Notarialna Katarzyna Sokołowska i Maria Majchrzak w Wągrowcu. Akty notarialne, poświadczenia, prawo spadkowe, nieruchomości. Tel. 67 26 20 868."
+>
+
+  <!-- Hero Section -->
+  <section class="relative bg-[#231F1C] text-white overflow-hidden">
+    <!-- Dark overlay -->
+    <div class="absolute inset-0 bg-gradient-to-r from-[#1A1714] via-[#231F1C]/90 to-[#231F1C]/50"></div>
+
+    <div class="relative container-wide py-20 md:py-28 lg:py-36">
+      <div class="max-w-2xl">
+        <p class="font-sans text-[#A38A66] text-sm tracking-[0.3em] uppercase mb-4">
+          Wągrowiec, ul. Kościuszki 18B
+        </p>
+        <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-6">
+          Kancelaria<br/>
+          <span class="text-[#C4A87E]">Notarialna</span><br/>
+          w Wągrowcu
+        </h1>
+        <div class="divider-brass-left"></div>
+        <p class="font-sans text-stone-300 text-lg mt-4 mb-2 font-light">
+          notariusz Katarzyna Sokołowska
+        </p>
+        <p class="font-sans text-stone-300 text-lg mb-8 font-light">
+          notariusz Maria Majchrzak
+        </p>
+        <p class="font-sans text-stone-400 text-base mb-10 leading-relaxed max-w-lg">
+          Sporządzamy akty notarialne, poświadczenia i inne czynności notarialne.
+          Zapraszamy do kontaktu w celu omówienia Państwa sprawy.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="/kontakt" class="btn-primary text-sm text-center tracking-wider">
+            Skontaktuj się z nami
+          </a>
+          <a href="/czynnosci-notarialne" class="btn-outline text-sm text-center tracking-wider border-stone-400 text-stone-300 hover:bg-stone-700 hover:border-stone-500 hover:text-white">
+            Wykaz czynności i dokumentów
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick contact bar -->
+  <section class="bg-[#A38A66]">
+    <div class="container-wide py-5">
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-10">
+        <a
+          href="tel:+48672620868"
+          class="flex items-center gap-3 text-white hover:text-cream-100 transition-colors group"
+        >
+          <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition-colors flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="text-xs font-sans opacity-80 uppercase tracking-wider">Telefon</div>
+            <div class="font-serif text-xl font-medium">67 26 20 868</div>
+          </div>
+        </a>
+
+        <div class="hidden sm:block w-px h-10 bg-white/30"></div>
+
+        <a
+          href="tel:+48693363868"
+          class="flex items-center gap-3 text-white hover:text-cream-100 transition-colors group"
+        >
+          <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition-colors flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="text-xs font-sans opacity-80 uppercase tracking-wider">Komórkowy</div>
+            <div class="font-serif text-xl font-medium">693 363 868</div>
+          </div>
+        </a>
+
+        <div class="hidden sm:block w-px h-10 bg-white/30"></div>
+
+        <div class="flex items-center gap-3 text-white">
+          <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="text-xs font-sans opacity-80 uppercase tracking-wider">Godziny urzędowania</div>
+            <div class="font-serif text-xl font-medium">Pon–Pt: 8:00–16:00</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- O kancelarii - skrót -->
+  <section class="py-16 md:py-24 bg-[#FDFBF7]">
+    <div class="container-wide">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="section-heading mb-4">O naszej kancelarii</h2>
+        <div class="divider-brass"></div>
+        <p class="font-sans text-[#4A4744] leading-relaxed text-base mt-6 mb-8">
+          Kancelaria Notarialna w Wągrowcu prowadzona jest przez notariusza Katarzynę Sokołowską
+          oraz notariusza Marię Majchrzak. Działamy jako spółka cywilna od 2018 roku.
+          Świadczymy kompleksową obsługę notarialną — zarówno dla osób fizycznych,
+          jak i przedsiębiorców oraz instytucji.
+        </p>
+        <p class="font-sans text-[#4A4744] leading-relaxed text-base mb-10">
+          Notariusz jest osobą zaufania publicznego. Czynności notarialne, dokonane przez
+          notariusza zgodnie z prawem, mają charakter dokumentu urzędowego.
+        </p>
+        <a href="/kancelaria" class="btn-outline text-sm tracking-wider">
+          Więcej o kancelarii
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trzy filary (wartości) -->
+  <section class="py-16 md:py-20 bg-[#EFEBE3]">
+    <div class="container-wide">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+
+        <div class="text-center">
+          <div class="w-14 h-14 rounded-full bg-[#A38A66]/15 flex items-center justify-center mx-auto mb-5">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#A38A66]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <h3 class="font-serif text-xl text-[#2C2A28] font-medium mb-3">Bezstronność</h3>
+          <p class="font-sans text-[#6B6864] text-sm leading-relaxed">
+            Notariusz działa jako bezstronny świadek i doradca wszystkich stron czynności
+            notarialnej, dbając o należyte zabezpieczenie ich praw i interesów.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-14 h-14 rounded-full bg-[#A38A66]/15 flex items-center justify-center mx-auto mb-5">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#A38A66]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="font-serif text-xl text-[#2C2A28] font-medium mb-3">Tajemnica zawodowa</h3>
+          <p class="font-sans text-[#6B6864] text-sm leading-relaxed">
+            Notariusz obowiązany jest zachować w tajemnicy okoliczności sprawy,
+            o których powziął wiadomość ze względu na wykonywane czynności notarialne.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-14 h-14 rounded-full bg-[#A38A66]/15 flex items-center justify-center mx-auto mb-5">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#A38A66]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+            </svg>
+          </div>
+          <h3 class="font-serif text-xl text-[#2C2A28] font-medium mb-3">Dokument urzędowy</h3>
+          <p class="font-sans text-[#6B6864] text-sm leading-relaxed">
+            Akty notarialne i inne czynności notarialne mają moc dokumentów urzędowych
+            i korzystają z domniemań prawdziwości oraz prawidłowości.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Szybki wykaz czynności -->
+  <section class="py-16 md:py-24 bg-[#FDFBF7]">
+    <div class="container-wide">
+      <div class="text-center mb-12">
+        <h2 class="section-heading mb-4">Zakres czynności notarialnych</h2>
+        <div class="divider-brass"></div>
+        <p class="font-sans text-[#6B6864] text-sm mt-5 max-w-xl mx-auto">
+          Dokonujemy wszelkich czynności notarialnych przewidzianych prawem. Poniżej najczęściej
+          wykonywane przez naszą kancelarię czynności.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+        {[
+          { icon: 'M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6', label: 'Nieruchomości', href: '/czynnosci-notarialne#nieruchomosci' },
+          { icon: 'M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z', label: 'Prawo spadkowe', href: '/czynnosci-notarialne#prawo-spadkowe' },
+          { icon: 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z', label: 'Pełnomocnictwa', href: '/czynnosci-notarialne#pelnomocnictwa' },
+          { icon: 'M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-2 10v-5a1 1 0 00-1-1h-2a1 1 0 00-1 1v5m4 0H9', label: 'Spółki', href: '/czynnosci-notarialne#spolki' },
+        ].map(item => (
+          <a
+            href={item.href}
+            class="group bg-[#EFEBE3] hover:bg-[#E3DDD3] transition-colors p-6 text-center"
+          >
+            <div class="w-12 h-12 rounded-full bg-[#A38A66]/15 flex items-center justify-center mx-auto mb-4 group-hover:bg-[#A38A66]/25 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#A38A66]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d={item.icon}/>
+              </svg>
+            </div>
+            <span class="font-serif text-base text-[#2C2A28] font-medium group-hover:text-[#A38A66] transition-colors">
+              {item.label}
+            </span>
+          </a>
+        ))}
+      </div>
+
+      <div class="text-center">
+        <a href="/czynnosci-notarialne" class="btn-primary text-sm tracking-wider">
+          Pełny wykaz czynności i wymaganych dokumentów
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Adres / lokalizacja -->
+  <section class="py-16 md:py-20 bg-[#EFEBE3]">
+    <div class="container-wide">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="section-heading mb-4">Znajdź nas</h2>
+          <div class="divider-brass-left"></div>
+          <address class="not-italic mt-6 space-y-3">
+            <p class="flex items-start gap-3 font-sans text-[#4A4744]">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#A38A66] flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+              <span>ul. Kościuszki 18B<br/>62-100 Wągrowiec</span>
+            </p>
+            <p class="flex items-center gap-3 font-sans text-[#4A4744]">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#A38A66] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+              <span>
+                <a href="tel:+48672620868" class="hover:text-[#A38A66] transition-colors">67 26 20 868</a>
+                &nbsp;/&nbsp;
+                <a href="tel:+48693363868" class="hover:text-[#A38A66] transition-colors">693 363 868</a>
+              </span>
+            </p>
+            <p class="flex items-center gap-3 font-sans text-[#4A4744]">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#A38A66] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              <span>Poniedziałek – Piątek: 8:00 – 16:00</span>
+            </p>
+          </address>
+          <div class="mt-8">
+            <a href="/kontakt" class="btn-primary text-sm tracking-wider">
+              Szczegóły kontaktu i mapa dojazdu
+            </a>
+          </div>
+        </div>
+
+        <!-- Map placeholder -->
+        <div class="w-full h-72 md:h-80 bg-stone-300 flex items-center justify-center">
+          <div class="text-center text-stone-500">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 mx-auto mb-2 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+            </svg>
+            <p class="text-sm">Mapa Google</p>
+            <p class="text-xs mt-1">(link do mapy zostanie uzupełniony)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>
