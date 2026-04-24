@@ -1,0 +1,245 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Opłaty i koszty"
+  description="Informacje o kosztach czynności notarialnych – taksa notarialna, podatki, opłaty sądowe. Kancelaria Notarialna w Wągrowcu."
+>
+
+  <!-- Page header -->
+  <div class="bg-[#231F1C] py-14 md:py-20">
+    <div class="container-wide">
+      <p class="font-sans text-[#A38A66] text-xs tracking-[0.3em] uppercase mb-3">
+        Kancelaria Notarialna w Wągrowcu
+      </p>
+      <h1 class="font-serif text-4xl md:text-5xl text-white font-semibold">
+        Opłaty i koszty
+      </h1>
+    </div>
+  </div>
+
+  <!-- Breadcrumb -->
+  <div class="bg-[#EFEBE3] border-b border-stone-300">
+    <div class="container-wide py-3">
+      <nav class="font-sans text-xs text-[#6B6864]">
+        <a href="/" class="hover:text-[#A38A66] transition-colors">Strona główna</a>
+        <span class="mx-2">›</span>
+        <span class="text-[#2C2A28]">Opłaty</span>
+      </nav>
+    </div>
+  </div>
+
+  <section class="py-16 md:py-24 bg-[#FDFBF7]">
+    <div class="container-wide">
+      <div class="max-w-4xl">
+
+        <!-- Intro -->
+        <div class="mb-14">
+          <h2 class="section-heading mb-4">Składniki kosztów notarialnych</h2>
+          <div class="divider-brass-left"></div>
+          <p class="font-sans text-[#4A4744] leading-relaxed text-sm mt-6">
+            Koszty związane z dokonaniem czynności notarialnej składają się z kilku odrębnych
+            elementów, regulowanych przez różne przepisy prawa. Notariusz podbiera
+            należności w imieniu własnym i w imieniu organów państwowych.
+          </p>
+        </div>
+
+        <!-- Składniki kosztów -->
+        <div class="mb-14">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+            <!-- Taksa notarialna -->
+            <div class="bg-[#EFEBE3] p-7 border-l-4 border-[#A38A66]">
+              <div class="w-10 h-10 rounded-full bg-[#A38A66]/15 flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#A38A66]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <h3 class="font-serif text-lg text-[#2C2A28] font-semibold mb-2">
+                Wynagrodzenie notariusza (taksa)
+              </h3>
+              <p class="font-sans text-[#4A4744] text-sm leading-relaxed">
+                Wynagrodzenie notariusza (taksa notarialna) jest ustalane na podstawie
+                <strong class="font-medium">rozporządzenia Ministra Sprawiedliwości z dnia 28 czerwca 2004 r.
+                w sprawie maksymalnych stawek taksy notarialnej</strong>.
+                Stawki mają charakter <em>maksymalny</em> — notariusz może pobrać
+                wynagrodzenie niższe, ale nigdy wyższe niż określone w rozporządzeniu.
+              </p>
+              <p class="font-sans text-[#4A4744] text-sm leading-relaxed mt-3">
+                Wysokość taksy zależy przede wszystkim od wartości przedmiotu czynności
+                notarialnej lub od rodzaju czynności (stawka stała).
+              </p>
+            </div>
+
+            <!-- VAT -->
+            <div class="bg-[#EFEBE3] p-7 border-l-4 border-stone-400">
+              <div class="w-10 h-10 rounded-full bg-stone-300/50 flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-stone-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"/>
+                </svg>
+              </div>
+              <h3 class="font-serif text-lg text-[#2C2A28] font-semibold mb-2">
+                Podatek VAT
+              </h3>
+              <p class="font-sans text-[#4A4744] text-sm leading-relaxed">
+                Do wynagrodzenia notariusza doliczany jest podatek od towarów i usług (VAT)
+                według stawki <strong class="font-medium">23%</strong>. Notariusz wystawia
+                fakturę VAT na żądanie strony.
+              </p>
+            </div>
+
+            <!-- Podatek PCC / SD -->
+            <div class="bg-[#EFEBE3] p-7 border-l-4 border-stone-400">
+              <div class="w-10 h-10 rounded-full bg-stone-300/50 flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-stone-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/>
+                </svg>
+              </div>
+              <h3 class="font-serif text-lg text-[#2C2A28] font-semibold mb-2">
+                Podatki od czynności cywilnoprawnych (PCC)
+              </h3>
+              <p class="font-sans text-[#4A4744] text-sm leading-relaxed">
+                Przy czynnościach podlegających podatkowi od czynności cywilnoprawnych (np. sprzedaż)
+                notariusz pobiera jako płatnik podatek PCC i odprowadza go do urzędu skarbowego.
+                Stawki wynikają z <strong class="font-medium">ustawy o podatku od czynności cywilnoprawnych</strong>.
+              </p>
+              <p class="font-sans text-[#4A4744] text-sm leading-relaxed mt-3">
+                Przykładowo: sprzedaż nieruchomości na rynku wtórnym — 2% wartości rynkowej.
+              </p>
+            </div>
+
+            <!-- Opłaty sądowe -->
+            <div class="bg-[#EFEBE3] p-7 border-l-4 border-stone-400">
+              <div class="w-10 h-10 rounded-full bg-stone-300/50 flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-stone-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-2 10v-5a1 1 0 00-1-1h-2a1 1 0 00-1 1v5m4 0H9"/>
+                </svg>
+              </div>
+              <h3 class="font-serif text-lg text-[#2C2A28] font-semibold mb-2">
+                Opłaty sądowe
+              </h3>
+              <p class="font-sans text-[#4A4744] text-sm leading-relaxed">
+                Przy czynnościach wymagających wpisu do Ksiąg Wieczystych lub rejestru
+                notariusz pobiera opłatę sądową, którą przekazuje sądowi.
+                Wysokość opłat reguluje <strong class="font-medium">ustawa o kosztach sądowych w sprawach cywilnych</strong>.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Zwolnienia podatkowe -->
+        <div class="mb-14">
+          <h2 class="section-heading mb-4">Zwolnienia z podatku od spadków i darowizn</h2>
+          <div class="divider-brass-left"></div>
+
+          <p class="font-sans text-[#4A4744] text-sm leading-relaxed mt-6 mb-6">
+            Ustawa o podatku od spadków i darowizn przewiduje istotne zwolnienia podatkowe
+            dla osób z tzw. <strong class="font-medium text-[#2C2A28]">I grupy podatkowej</strong>
+            (małżonek, zstępni – dzieci, wnuki, pradziadkowie, wstępni – rodzice, dziadkowie,
+            pasierb, zięć, synowa, rodzeństwo, ojczym, macocha, teściowie):
+          </p>
+
+          <div class="bg-[#EFEBE3] p-6">
+            <div class="space-y-4">
+              <div class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#A38A66] flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <div>
+                  <p class="font-sans text-sm text-[#2C2A28] font-medium">
+                    Zwolnienie dla „grupy zerowej" (małżonek, zstępni, wstępni, pasierb, rodzeństwo, ojczym, macocha)
+                  </p>
+                  <p class="font-sans text-sm text-[#4A4744] mt-1">
+                    Nabycie majątku w drodze dziedziczenia lub darowizny jest całkowicie zwolnione z podatku
+                    pod warunkiem zgłoszenia nabycia do urzędu skarbowego w terminie 6 miesięcy od dnia
+                    powstania obowiązku podatkowego. Przy nabyciu w drodze dziedziczenia potwierdzonego
+                    aktem poświadczenia dziedziczenia — notariusz przekazuje informację do urzędu skarbowego.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#A38A66] flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <div>
+                  <p class="font-sans text-sm text-[#2C2A28] font-medium">
+                    Ulga mieszkaniowa
+                  </p>
+                  <p class="font-sans text-sm text-[#4A4744] mt-1">
+                    W określonych warunkach nabywca nieruchomości mieszkalnej może skorzystać
+                    z ulgi mieszkaniowej w podatku od spadków i darowizn.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#A38A66] flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <div>
+                  <p class="font-sans text-sm text-[#2C2A28] font-medium">
+                    Zwolnienie z PCC przy pierwszym nabyciu mieszkania
+                  </p>
+                  <p class="font-sans text-sm text-[#4A4744] mt-1">
+                    Od 31 sierpnia 2023 r. zakup pierwszego mieszkania z rynku wtórnego jest
+                    zwolniony z podatku PCC (2%). Zwolnienie dotyczy osób, które nie posiadają
+                    ani nie posiadały wcześniej żadnego prawa własności lokalu mieszkalnego,
+                    spółdzielczego własnościowego prawa do lokalu ani udziału w takich prawach.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wycena indywidualna -->
+        <div class="bg-[#231F1C] p-8 md:p-10">
+          <h3 class="font-serif text-white text-2xl font-medium mb-4">
+            Wycena kosztów konkretnej czynności
+          </h3>
+          <p class="font-sans text-stone-400 text-sm leading-relaxed mb-6">
+            Koszty związane z konkretną czynnością notarialną są zawsze ustalane
+            indywidualnie z uwzględnieniem wartości przedmiotu czynności, jej rodzaju
+            oraz aktualnych stawek podatkowych i opłat sądowych. Prosimy o kontakt
+            telefoniczny lub mailowy — chętnie przygotujemy wstępne zestawienie kosztów.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-3">
+            <a href="tel:+48672620868" class="btn-primary text-sm text-center tracking-wider">
+              Zadzwoń: 67 26 20 868
+            </a>
+            <a href="mailto:sokolows@rejent.poznan.pl" class="btn-outline text-sm text-center tracking-wider text-stone-300 border-stone-600 hover:bg-stone-700 hover:border-stone-500">
+              Napisz e-mail
+            </a>
+          </div>
+        </div>
+
+        <!-- Podstawa prawna -->
+        <div class="mt-10 p-6 border border-stone-200">
+          <h4 class="font-sans text-xs text-[#6B6864] uppercase tracking-widest font-medium mb-3">
+            Podstawa prawna
+          </h4>
+          <ul class="space-y-1.5">
+            {[
+              'Rozporządzenie Ministra Sprawiedliwości z dnia 28 czerwca 2004 r. w sprawie maksymalnych stawek taksy notarialnej (Dz.U. 2004 nr 148 poz. 1564 z późn. zm.)',
+              'Ustawa z dnia 9 września 2000 r. o podatku od czynności cywilnoprawnych (Dz.U. 2023 poz. 170 t.j.)',
+              'Ustawa z dnia 28 lipca 1983 r. o podatku od spadków i darowizn (Dz.U. 2023 poz. 1774 t.j.)',
+              'Ustawa z dnia 28 lipca 2005 r. o kosztach sądowych w sprawach cywilnych (Dz.U. 2024 poz. 959 t.j.)',
+            ].map(przepis => (
+              <li class="flex items-start gap-2">
+                <span class="text-[#A38A66] font-bold text-xs flex-shrink-0 mt-0.5">–</span>
+                <span class="font-sans text-xs text-[#6B6864]">{przepis}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</Layout>
