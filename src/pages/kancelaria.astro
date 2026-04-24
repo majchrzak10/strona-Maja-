@@ -123,18 +123,13 @@ import Layout from '../layouts/Layout.astro';
           <div class="divider-brass-left"></div>
 
           <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Zdjęcie budynku - placeholder -->
-            <div class="bg-stone-200 aspect-video flex items-center justify-center">
-              <div class="text-center text-stone-400">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 mx-auto mb-2 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                    d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
-                  <polyline stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" points="9 22 9 12 15 12 15 22"/>
-                </svg>
-                <p class="text-sm">Zdjęcie budynku kancelarii</p>
-                <p class="text-xs mt-1">(zostanie uzupełnione)</p>
-              </div>
-            </div>
+            <!-- Zdjęcie budynku kancelarii -->
+            <img
+              src="/images/budynek.jpg"
+              alt="Budynek Kancelarii Notarialnej przy ul. Kościuszki 18B w Wągrowcu"
+              class="w-full aspect-video object-cover object-center"
+              loading="lazy"
+            />
 
             <!-- Wnętrze - placeholder -->
             <div class="bg-stone-200 aspect-video flex items-center justify-center">
